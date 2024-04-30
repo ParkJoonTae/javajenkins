@@ -25,23 +25,22 @@ pipeline {
             }
        }     
 
-	stage("Test Application"){
+        stage("Test Application"){
             steps {
         	sh "mvn test"
             }
        }
 
-	stage("Git status"){
+        stage("Git status"){
             steps {
         	sh "git status"
             }
        }
-   }
    
-	stage("SonarQube Analysis"){
+        stage("SonarQube Analysis"){
             steps {
                 script {
-                    withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token'){
+                    withSonarQubeEnv(credentiaslId: 'jenkins-sonarqube-token'){
                         sh "mvn sonar:sonar"
                     }
                 }
