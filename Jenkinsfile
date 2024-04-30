@@ -46,6 +46,15 @@ pipeline {
                 }
             }
        }
+       
+       stage("Quality Gate"){ 
+       // abortPipeline:false : QualityGate가 실패해도 파이프라인 동작
+           steps {
+               script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'jenkins-sonarqube-token'
+                }	
+            }
+        }
    }
 }
 
