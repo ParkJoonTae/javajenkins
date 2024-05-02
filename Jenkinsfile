@@ -25,7 +25,7 @@ pipeline {
         stage("Checkout from SCM"){
 	// 'github'는 전 단계에서 Jenkins Credentials에 정의 
                 steps {
-                	git branch: 'main', credentialsId: 'github', url: 'https://github.com/Ashfaque-9x/register-app'
+                	git branch: 'main', credentialsId: 'github', url: 'https://github.com/ParkJoonTae/javajenkins.git'
                 }
         }
 
