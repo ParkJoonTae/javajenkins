@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>DevOps CI/CD 학습 - 새 사용자 등록 서비스</h1>
+    <h1>DevOps CI/CD Learning</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
